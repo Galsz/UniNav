@@ -1,11 +1,8 @@
+import Frontend from "../templates/frontend";
+
 
 function App() {
-
-  return (
-    <>
-      <div>teste</div>
-    </>
-  )
+  return <Frontend></Frontend>
 }
 
-export default App
+export default App;
