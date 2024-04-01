@@ -15,6 +15,7 @@ export interface ContainerProps {
     src: string;
     width?: string;
     height?: string;
+    color?: string;
     onClick?: () => void;
   }
   

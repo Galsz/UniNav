@@ -1,4 +1,4 @@
-import Frontend from "../templates/frontend";
+import Frontend from "./templates/frontend";
 
 
 function App() {

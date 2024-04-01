@@ -1,7 +1,10 @@
 
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const NavLink = styled("div")`
+import { btnReset,v } from "../../styles/variables";
+
+export const NavLink = styled(Link)`
   display: inline-block;
   text-align: center;
 `;
@@ -18,11 +21,12 @@ export const SidebarNav = styled.div<{sidebar : boolean}>`
 `;
 
 export const SidebarButton = styled.button<{rotate: boolean}>`
+    ${btnReset};
     position: absolute;
     cursor: pointer;
     top: 10%;
     right: -13px;
-    height: 35px;
+    height: 22px;
     width: 22px;
     z-index: 1;
     transform: ${({rotate} ) => (rotate ? '' : 'rotate(180deg)')}; 
@@ -41,21 +45,14 @@ export const Span = styled("span")`
   }
 `;
 
-export const CustomSidebarContainer = styled.div`
+export const CustomSidebarContainer = styled.div<{sidebar : boolean}>`
     background: transparent;
-    margin: 0.5rem 2rem;
-
-  @media only screen and (max-width: 411px) {
-    width: 150px;
-  }
-
-  @media only screen and (max-width: 320px) {
-    width: 118px;
-  }
+    margin: 0.5rem 1.1rem;
+    padding-left: ${({sidebar} ) =>  (sidebar ? '250px' : '0')};
+    transition: padding-left 0.5s ease-in-out;
 `;
 
 export const CustomSidebarLink = styled.div`
-    display: flex;
     align-self: center;
     text-decoration: none;
     color: inherit;
@@ -74,9 +71,47 @@ export const CustomSidebarLinkLabel = styled.span`
 `;
 
 export const CustomSidebarTitle = styled.h3`
+    margin:  0.5rem 1rem;
     display: flex;
     font-size: 1rem;
     padding-top: 20%;
     color: #5C5B5B;
-    margin: 0.5rem 2rem;
+`;
+
+export const SidebarListBlock = styled.div`
+    position: absolute;
+    margin:  0.5rem 1rem;
+`
+
+export const SLinkContainer = styled.div`
+    border-radius: ${v.borderRadius};
+    margin: 8px 0;
+
+    :hover {
+        box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg3};
+    }
+`;
+
+export const SLink = styled(Link)`
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    padding: calc(${v.smSpacing} - 2px) 0;
+`;
+
+export const SLinkIcon = styled.div`
+    padding: ${v.smSpacing} ${v.mdSpacing};
+    display: flex;
+
+    svg {
+        font-size: 20px;
+    }
+`;
+
+export const SLinkLabel = styled.span`
+    display: block;
+    flex: 1;
+    margin-left: ${v.smSpacing};
 `;
