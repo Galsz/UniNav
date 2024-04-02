@@ -32,8 +32,8 @@ const GlobalStyle = createGlobalStyle`
     h5,
     h6 {
         font-family: 'Poppins', sans-serif;
-        color: #013F7C;
-        font-size: 56px;
+        color: rgb(92,91,91,90%);
+        font-size: 36px;
         line-height: 1.18;
         font-weight: bold;
 
@@ -47,13 +47,22 @@ const GlobalStyle = createGlobalStyle`
     }
 
     p {
-        color: #0F76A3;
+        color: #5C5B5B;
         font-size: 21px;        
         line-height: 1.41;
     }
 
     h1 {
         font-weight: 600;
+    }
+
+
+    label {
+        font-family: 'Poppins', sans-serif;
+        color: #5C5B5B;
+        font-size: 15px;
+        line-height: 1.18;
+        font-weight: bold;
     }
 
     a {

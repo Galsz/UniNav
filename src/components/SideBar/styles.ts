@@ -50,6 +50,14 @@ export const CustomSidebarContainer = styled.div<{sidebar : boolean}>`
     margin: 0.5rem 1.1rem;
     padding-left: ${({sidebar} ) =>  (sidebar ? '250px' : '0')};
     transition: padding-left 0.5s ease-in-out;
+
+    @media only screen and (max-width: 768px) {
+        margin: 0.5rem 0.2rem;
+    }
+
+    @media only screen and (max-width: 80px) {
+        margin: 0.5rem 0.8rem;
+    }
 `;
 
 export const CustomSidebarLink = styled.div`
@@ -76,6 +84,10 @@ export const CustomSidebarTitle = styled.h3`
     font-size: 1rem;
     padding-top: 20%;
     color: #5C5B5B;
+
+    @media only screen and (max-width: 768px) {
+        margin: 1.25rem 0.2rem;
+    }
 `;
 
 export const SidebarListBlock = styled.div`

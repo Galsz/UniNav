@@ -22,8 +22,20 @@ export interface ContainerProps {
   export interface InputProps {
     name: string;
     placeholder: string;
-    t: unknown;
+    t: string;
     type?: string;
+    value?: string;
+    onChange: (
+      event:
+        | React.ChangeEvent<HTMLInputElement>
+        | React.ChangeEvent<HTMLTextAreaElement>
+    ) => void;
+  }
+
+  export interface SelectProps {
+    name: string;
+    options: undefined;
+    t: string;
     value?: string;
     onChange: (
       event:

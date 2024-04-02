@@ -12,7 +12,7 @@ import Divider from '@mui/material/Divider';
 
 
 
-export default function TemporaryDrawer() {
+export default function SideBar() {
     const [open, setOpen] = React.useState(false);
     const toggleDrawer = () => setOpen(!open);
 
