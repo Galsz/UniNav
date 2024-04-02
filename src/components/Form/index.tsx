@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import * as S from './style'
-import Input from './FormInput';
-import Select from './FormSelect';
+import Input from '../../common/Input';
+import Select from '../../common/Select';
 import { Button } from '../../common/Button';
+import TextArea from '../../common/TextArea';
 
 const FormEvent = () => {
 
@@ -54,10 +55,10 @@ const FormEvent = () => {
                     />
                 </S.FormGroup>
                 <S.FormGroup>
-                    <Select name={'Local_id'} t={'Local do Evento'}/>
+                    <Select name={'Local_id'} t={'Local do Evento'} onChange={handleChange} />
                 </S.FormGroup>
             </S.FormRow>
-            <Input 
+            <TextArea 
                 type="discription" 
                 name="name" 
                 t='Descrição'

@@ -1,6 +1,5 @@
-import React from "react";
 import * as S from './styles'
-import FormEvent from "../../components/FormEvent";
+import FormEvent from "../../components/Form";
 
 const EventRegister = () => {
   return (

@@ -1,5 +1,5 @@
 import * as S from './styles'
-import { InputProps } from '../../../@types/types';
+import { InputProps } from '../../@types/types';
 
 function Input({type, t, name, placeholder, onChange, value}: InputProps) {
     return (

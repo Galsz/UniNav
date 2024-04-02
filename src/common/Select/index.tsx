@@ -1,4 +1,4 @@
-import { SelectProps } from '../../../@types/types';
+import { SelectProps } from '../../@types/types';
 import * as S from './styles'
 
 function Select({t, name, options, OnChange, value}: SelectProps) {
