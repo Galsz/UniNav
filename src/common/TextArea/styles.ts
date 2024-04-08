@@ -8,9 +8,12 @@ export const StyledContainer = styled("div")`
 `;
 
 export const StyledTextArea = styled("textarea")`
-  resize: none;
   font-size: 0.875rem;
-  height: 185px;
+  width: 100%;
+  background-color: rgb(151,151,151,20%);
+  border-radius: 9px;
+  border: none;
+  height: 10rem;
 `;
 
 export const Label = styled("label")`

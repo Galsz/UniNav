@@ -5,6 +5,7 @@ import { v } from "./variables";
 
 export const Layout = styled.div`
     display: flex;
+    height:100%;
 `
 export const Container = styled.main`
     margin: calc(${v.smSpacing} * 2);

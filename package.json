@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "backend": "json-server --watch db.json --port 5000",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -15,8 +16,11 @@
     "@mui/icons-material": "^5.15.14",
     "@mui/material": "^5.15.14",
     "antd": "^5.15.3",
+    "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
+    "react-awesome-reveal": "^4.2.8",
     "react-dom": "^18.2.0",
+    "react-i18next": "^14.1.0",
     "react-router-dom": "^6.22.3",
     "styled-components": "^6.1.8"
   },

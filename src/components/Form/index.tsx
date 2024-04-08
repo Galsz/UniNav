@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as S from './style'
 import Input from '../../common/Input';
 import Select from '../../common/Select';
@@ -6,7 +6,23 @@ import { Button } from '../../common/Button';
 import TextArea from '../../common/TextArea';
 
 const FormEvent = () => {
+    const[events, setevents] = useState([])
 
+    useEffect(() => {
+        fetch("http://localhost:5000/bloco", {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+        .then((resp) => resp.json())
+        .then((data) => {
+            setevents(data)
+        })
+        .catch((err) => console.log(err))
+
+    }, []);
+    
     const [event, setEvent] = useState({
         startDate: '',
         endDate: '',
@@ -55,12 +71,12 @@ const FormEvent = () => {
                     />
                 </S.FormGroup>
                 <S.FormGroup>
-                    <Select name={'Local_id'} t={'Local do Evento'} onChange={handleChange} />
+                    <Select name={'Local_id'} t={'Local do Evento'} options={events} onChange={handleChange} />
                 </S.FormGroup>
             </S.FormRow>
             <TextArea 
                 type="discription" 
-                name="name" 
+                name="Descricao" 
                 t='Descrição'
                 placeholder=''
                 value={event.name} 
