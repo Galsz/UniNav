@@ -3,9 +3,7 @@ import styled from "styled-components";
 
 export const UniversityMapContainer = styled.div`
     display: flex;
-    margin: 0 auto;
     padding: 1rem 4rem 0;
-    padding-top: 0;
 `
 
 export const Row = styled.div`

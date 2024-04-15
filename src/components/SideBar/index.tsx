@@ -1,6 +1,8 @@
 import * as React from 'react';
 import * as S from './styles';
 import { SvgIcon } from '../../common/SvgIcon';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -13,10 +15,13 @@ import Divider from '@mui/material/Divider';
 
 
 export default function SideBar() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     const [open, setOpen] = React.useState(false);
     const toggleDrawer = () => setOpen(!open);
 
-    const [openevents, setOpenEvent] = React.useState(true);
+    const [openevents, setOpenEvent] = React.useState(false);
 
 
     const [selectedIndex, setSelectedIndex] = React.useState(1);
@@ -41,7 +46,7 @@ export default function SideBar() {
                         <ListItemIcon sx={{color: selectedIndex === 0 ? '#4285F4' : ''}}>
                             <SvgIcon src="location-arrow.svg" aria-label="homepage" width="22px" height="22px" color= {selectedIndex === 0 ? '#4285F4' : ''}/>
                         </ListItemIcon>
-                        {open && (
+                        {!isMobile && open && (
                             <ListItemText primary={'Navegar'} sx={{color: selectedIndex === 0 ? '#4285F4' : ''}}/>
                         )}
                     </ListItemButton>
@@ -54,11 +59,12 @@ export default function SideBar() {
                     <ListItemIcon sx={{color: selectedIndex === 1 ? '#4285F4' : ''}}>
                         <SvgIcon src="icon_Calendar.svg" aria-label="Events" width="22px" height="22px"/>
                     </ListItemIcon>
-                    {open && (
+                    {!isMobile && open && (
                         <ListItemText primary={'Eventos'} sx={{color: selectedIndex === 1 ? '#4285F4' : ''}} />
                     )}
-                    {openevents ? <ExpandLess /> : <ExpandMore />}
+                    {!isMobile && ( openevents ? <ExpandLess /> : <ExpandMore /> )}
                 </ListItemButton>
+                {!isMobile && (
                 <Collapse in={openevents} timeout="auto" unmountOnExit sx={{ pl: 7 }}>
                     <Divider />
                     <List component="div" disablePadding>
@@ -75,6 +81,7 @@ export default function SideBar() {
                     </List>
                     <Divider />
                 </Collapse>
+                )}
                 <Link to={'map'}>
                     <ListItemButton 
                     selected={selectedIndex === 2}
@@ -83,7 +90,7 @@ export default function SideBar() {
                         <ListItemIcon >
                             <SvgIcon src="Map.svg" aria-label="Map" width="22px" height="22px" />
                         </ListItemIcon>
-                        {open && (
+                        {!isMobile && open && (
                             <ListItemText primary={'Mapa'} sx={{color: selectedIndex === 2 ? '#4285F4' : ''}}/>
                         )}
                     </ListItemButton>
@@ -95,7 +102,7 @@ export default function SideBar() {
   return (
     <S.CustomSidebarContainer sidebar={open}>
       <S.SidebarNav sidebar={open}>
-        <S.SidebarButton rotate={open} onClick={toggleDrawer}>
+        n<S.SidebarButton rotate={open} onClick={toggleDrawer}>
             <SvgIcon src="SideBarIcon.svg" aria-label="homepage" width="27px" height="27px"/>
         </S.SidebarButton>
         <S.SidebarListBlock>

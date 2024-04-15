@@ -6,7 +6,6 @@ import EventList from '../pages/EventList';
 import EventRegister from '../pages/EventRegister';
 import App from '../App';
 
-
 export const router = createBrowserRouter ([
     {
         path: '/',

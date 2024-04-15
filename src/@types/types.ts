@@ -34,7 +34,7 @@ export interface ContainerProps {
 
   export interface SelectProps {
     name: string;
-    options: undefined;
+    options?: undefined;
     t: string;
     value?: string;
     onChange: (
@@ -50,5 +50,9 @@ export interface ContainerProps {
     email: string;
     empresa: string;
     tel: string;
+  }
+
+  export interface imageSlider {
+    imgUrls: string[];
   }
   

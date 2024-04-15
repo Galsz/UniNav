@@ -11,7 +11,6 @@ export const NavLink = styled(Link)`
 
 export const SidebarNav = styled.div<{sidebar : boolean}>`
     position: absolute;
-    top: 60px;
     left: ${({sidebar} ) =>  (sidebar ? '0' : '-20vw')};
     height: 100%;
     width: 22vw;
@@ -24,10 +23,10 @@ export const SidebarButton = styled.button<{rotate: boolean}>`
     ${btnReset};
     position: absolute;
     cursor: pointer;
-    top: 10%;
-    right: -13px;
-    height: 22px;
-    width: 22px;
+    top: 20%;
+    right: -15px;
+    height: 27px;
+    width: 27px;
     z-index: 1;
     transform: ${({rotate} ) => (rotate ? '' : 'rotate(180deg)')}; 
     transition: transform 0.3s ease-in-out;
@@ -47,12 +46,12 @@ export const Span = styled("span")`
 
 export const CustomSidebarContainer = styled.div<{sidebar : boolean}>`
     background: transparent;
-    margin: 0.5rem 1.1rem;
-    padding-left: ${({sidebar} ) =>  (sidebar ? '250px' : '0')};
+    padding-left: ${({sidebar} ) =>  (sidebar ? '22vw' : '2vw')};
     transition: padding-left 0.5s ease-in-out;
+    z-index: 999;
 
     @media only screen and (max-width: 768px) {
-        margin: 0.5rem 0.2rem;
+        margin: 0.5rem 0;
     }
 
     @media only screen and (max-width: 80px) {
@@ -92,7 +91,7 @@ export const CustomSidebarTitle = styled.h3`
 
 export const SidebarListBlock = styled.div`
     position: absolute;
-    margin:  0.5rem 1rem;
+    margin:  5rem 1rem;
 `
 
 export const SLinkContainer = styled.div`

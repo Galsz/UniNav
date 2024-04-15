@@ -1,11 +1,10 @@
 import React from "react";
+import MapComponent from "../../components/Map";
 
 
 const Navegation = () => {
     return (
-        <div>
-            <h1>Nav</h1>
-        </div>
+        <MapComponent />
       )
 }
 

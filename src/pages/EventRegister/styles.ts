@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const EventFormContainer = styled.div`
-    margin: 0 auto;
+    margin-top: 2rem;
     padding: 0 4rem 0;
     padding-top: 0;
 `

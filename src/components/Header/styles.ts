@@ -6,7 +6,7 @@ export const HeaderSection = styled.header`
   padding: 0.5rem 0.5rem;
   position: fixed;
   width: 100%;
-  z-index: 999;
+  z-index: 1000;
   background-color:#FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
   
