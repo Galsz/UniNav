@@ -9,7 +9,7 @@ function Input({type, t, name, placeholder, onChange, value}: InputProps) {
                 type={type} 
                 name={name} 
                 id={name} 
-               placeholder={placeholder}  
+                placeholder={placeholder}  
                 onChange={onChange}
                 value={value}
             />

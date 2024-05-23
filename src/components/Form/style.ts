@@ -11,6 +11,10 @@ export const FormRow = styled.div`
     justify-content: space-between;
     width: 100%;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 
 export const FormGroup = styled.div`
@@ -23,4 +27,8 @@ export const FormGroup = styled.div`
 export const FormActions = styled.div`
     margin-top: 20px;
     text-align: right;
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
 `

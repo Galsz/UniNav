@@ -47,9 +47,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     p {
-        color: #5C5B5B;
-        font-size: 21px;        
+    
+        color: #fff;
+        font-size: 0.8rem;
         line-height: 1.41;
+
     }
 
     h1 {
@@ -60,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
     label {
         font-family: 'Poppins', sans-serif;
         color: #5C5B5B;
-        font-size: 15px;
+        font-size: 3vh;
         line-height: 1.18;
         font-weight: bold;
     }

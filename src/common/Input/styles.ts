@@ -4,6 +4,8 @@ export const FormControl = styled.div`
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
+    width: 70%;
+
 `
 
 export const FormControlLabel = styled.label`
@@ -14,8 +16,10 @@ export const FormControlLabel = styled.label`
 
 export const FormControlInput = styled.input`
     padding: .7em;
+    border-color: #C0C0C0;
+    border-style: double;
     border-radius: 9px;
-    border: none;
+    font-size: 16px;
     background-color: rgb(151,151,151,20%);
     
 `

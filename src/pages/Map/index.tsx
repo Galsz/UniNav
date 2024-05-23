@@ -27,7 +27,7 @@ const Map = () => {
             />
         </S.Group>
         <S.Group>
-            <UniversityMap width={600}/>
+            <UniversityMap width={'100%'}/>
         </S.Group>
     </S.UniversityMapContainer>
     )

@@ -52,7 +52,7 @@ export default function SideBar() {
                     </ListItemButton>
                 </ Link>
            
-                <ListItemButton 
+                {/* <ListItemButton 
                 selected={selectedIndex === 1}
                 onClick={(event) => {handleListItemClick(event, 1)}}
                 >
@@ -94,7 +94,7 @@ export default function SideBar() {
                             <ListItemText primary={'Mapa'} sx={{color: selectedIndex === 2 ? '#4285F4' : ''}}/>
                         )}
                     </ListItemButton>
-                </Link>
+                </Link> */}
             </List>
         </Box>
     );

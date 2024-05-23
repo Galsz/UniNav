@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const EventFormContainer = styled.div`
-    margin-top: 2rem;
-    padding: 0 4rem 0;
-    padding-top: 0;
+    margin: 1.5rem 5rem 0;
+
+    @media only screen and (max-width: 768px) {
+        margin: 1.5rem 3rem 0;
+    }
 `
 
-export const EventFormTitle = styled.div`
-    font-size: 24px;
+export const EventFormTitle = styled.h2`
+    font-size: 30px;
     text-align: center;
     font-weight: bold;
 `

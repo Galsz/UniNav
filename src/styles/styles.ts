@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-import { v } from "./variables";
-
-
 export const Layout = styled.div`
     display: flex;
     height:100%;

@@ -7,8 +7,8 @@ export const Button = ({
   children,
   onClick,
 }: ButtonProps) => (
-  <StyledButton color={color} fixedWidth={fixedWidth} onClick={onClick}>
-    {children}
+  <StyledButton color={color} width={fixedWidth} onClick={onClick}>
+    <p>{children}</p> 
   </StyledButton>
 );
 

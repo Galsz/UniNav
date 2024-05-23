@@ -9,7 +9,7 @@ const FormEvent = () => {
     const[events, setevents] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:5000/bloco", {
+        fetch("http://localhost:5000/locais", {
         method: "GET",
         headers: {
             'Content-Type': 'application/json',

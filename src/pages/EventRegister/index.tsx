@@ -4,7 +4,7 @@ import FormEvent from "../../components/Form";
 const EventRegister = () => {
   return (
     <S.EventFormContainer>
-        <S.EventFormTitle><h2>Cadastro de Eventos</h2></S.EventFormTitle>
+        <S.EventFormTitle>Cadastro de Eventos</S.EventFormTitle>
         <FormEvent />
     </S.EventFormContainer>
   )

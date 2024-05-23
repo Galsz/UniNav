@@ -4,6 +4,10 @@ import styled from "styled-components";
 export const UniversityMapContainer = styled.div`
     display: flex;
     padding: 1rem 4rem 0;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 
 export const Row = styled.div`
