@@ -1,6 +1,5 @@
 import * as S from './styles';
 import { SvgIcon } from '../../common/SvgIcon';
-import Input from '../../common/Input';
 import { useState, useEffect } from 'react';
 import RoutesNav from '../RoutesNav';
 
