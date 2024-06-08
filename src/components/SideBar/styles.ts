@@ -11,7 +11,7 @@ export const NavLink = styled(Link)`
 
 export const SidebarNav = styled.div<{sidebar : boolean}>`
     position: absolute;
-    left: ${({sidebar} ) =>  (sidebar ? '0' : '-20vw')};
+    left: ${({ sidebar }) => (sidebar ? '0' : '-20vw')};
     height: 100%;
     width: 22vw;
     transition: left 0.5s ease-in-out;
@@ -19,7 +19,7 @@ export const SidebarNav = styled.div<{sidebar : boolean}>`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
 `;
 
-export const SidebarButton = styled.button<{rotate: boolean}>`
+export const SidebarButton = styled.button<{ rotate: boolean }>`
     ${btnReset};
     position: absolute;
     cursor: pointer;
@@ -27,8 +27,8 @@ export const SidebarButton = styled.button<{rotate: boolean}>`
     right: -15px;
     height: 27px;
     width: 27px;
-    z-index: 1;
-    transform: ${({rotate} ) => (rotate ? '' : 'rotate(180deg)')}; 
+    z-index: 1; 
+    transform: ${({ rotate }) => (rotate ? '' : 'rotate(180deg)')}; 
     transition: transform 0.3s ease-in-out;
     background-color: transparent;
 `;

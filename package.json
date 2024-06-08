@@ -4,19 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "backend": "json-server --watch db.json --port 5000",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "start": "concurrently \"yarn dev\" \"yarn backend\"",
-    "start-server": "ts-node src/server.ts"
+    "start-a": "./node_modules/.bin/react-scripts start",
+    "start": "set PORT=3333 && set HOST=127.0.0.1 && react-scripts start",
+    "server": "live-server public --host=0.0.0.0 --port=3333 --middleware=./disable-browser-cache.js",
+    "dev": "set PORT=3031 && set HOST=0.0.0.0 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.14",
     "@mui/material": "^5.15.14",
+    "@turf/turf": "^6.5.0",
     "@types/leaflet": "^1.9.12",
     "antd": "^5.15.3",
     "cors": "^2.8.5",
